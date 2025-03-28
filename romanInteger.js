@@ -8,10 +8,15 @@ var romanToInt = function (s) {
     D: 500,
     M: 1000,
   };
+  let count = 0;
 
   const arr = s.split("");
-
+  for (let x of arr) {
+    // console.log(obj[x]);
+    count = count + obj[x];
+  }
+  console.log(count);
   console.log(arr);
 };
 
-romanToInt("III");
+romanToInt("VIII");
