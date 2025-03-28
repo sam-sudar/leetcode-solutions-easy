@@ -11,12 +11,16 @@ var romanToInt = function (s) {
   let count = 0;
 
   const arr = s.split("");
+  if (arr[("I", "I", "I")]) {
+    console.log("Its three");
+  }
   for (let x of arr) {
-    // console.log(obj[x]);
+    console.log(obj[x]);
     count = count + obj[x];
   }
   console.log(count);
-  console.log(arr);
+  // console.log(arr);
+  // return count;
 };
 
-romanToInt("VIII");
+romanToInt("IV");
