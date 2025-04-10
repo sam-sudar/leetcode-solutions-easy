@@ -11,16 +11,25 @@ var romanToInt = function (s) {
   let count = 0;
 
   const arr = s.split("");
-  if (arr[("I", "I", "I")]) {
-    console.log("Its three");
-  }
+  let currVal = obj[arr[0]];
+  let minusVal = 0;
+  console.log(currVal);
+
   for (let x of arr) {
-    console.log(obj[x]);
-    count = count + obj[x];
+    if (currVal < obj[x]) {
+      minusVal = obj[x] - currVal;
+      count = count - currVal + minusVal;
+      console.log("If loop: " + count);
+    } else {
+      count = count + obj[x];
+      console.log("Else loop: " + count);
+    }
+    currVal = obj[x];
+    // console.log(currVal);
   }
   console.log(count);
   // console.log(arr);
   // return count;
 };
 
-romanToInt("IV");
+romanToInt("MCMXCIV");
