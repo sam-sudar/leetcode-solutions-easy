@@ -23,7 +23,7 @@ function bubble(arr) {
     for (let j = 0; j < i - 1; j++) {
       //   console.log("Chckpoint", arr[i], arr[j]);
       if (arr[j] > arr[j + 1]) {
-        //made a rokkie mistake her
+        //made a rokkie mistake here
         temp = arr[j + 1];
         arr[j + 1] = arr[j];
         arr[j] = temp;
